@@ -1,0 +1,8 @@
+langchain
+langchain-community==0.3.21
+sentence-transformers
+chromadb==0.4.24
+google-generativeai
+pypdf
+faiss-cpu
+tqdm
