@@ -43,7 +43,9 @@ the layers.
    make sure that the prompt is exhaustive in its instructions, and the relevant information is correctly passed to the
    prompt. We may also choose to provide some few-shot examples in an attempt to improve the LLM output.
 
-## 5. System Layers
+## 5. System Layers & Architecture
+
+The Main file **MR.HELPMATE.ipnyb** runs the code. 
 
 - **Reading & Processing PDF File:** We will be using PyPDFLoader to read and
   process the PDF files. PyPDFLoader allows for better parsing of the PDF file as it can read various elements of the PDF apart from the plain 
@@ -66,15 +68,12 @@ the layers.
 - **Retrieval Augmented Generation:** Now we have the final top search results, we can pass it to an gemini-2.0-pro-exp-02-05 along
   with the user query and a well-engineered prompt, to generate a direct answer to the query along with citations.
 
-## 6. System Architecture
 
-- The
-
-## 7. Prerequisites
+## 6. Prerequisites
 
 - Please ensure that you add your OpenAI API key to the empty text file named .env file in order to access the
   OpenAI API.
 
-## 8. Query Screenshots
+## 7. Query Screenshots
 
 It is present in results folder. 
