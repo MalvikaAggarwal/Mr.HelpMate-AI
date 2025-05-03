@@ -1,7 +1,17 @@
 import google.generativeai as genai
+from dotenv import load_dotenv
 import os
 
-genai.configure(api_key="AIzaSyAYIHIziCeg8JqR7Qbbu6nDx_gyLlx-kzA")
+# Load the .env file
+load_dotenv()
+
+api_key = os.getenv("GENERATIVE_AI_API_KEY")
+if not api_key:
+    raise ValueError("API key not found. Please ensure it is set in the .env file.")
+
+genai.configure(api_key=api_key)
+
+
 def generate_answer(query, top_chunks):
     context = "\n\n".join([chunk for chunk, _ in top_chunks])
     prompt = f"""
