@@ -1,7 +1,7 @@
 import pickle
 from sentence_transformers import CrossEncoder
 
-CACHE_FILE = "/workspaces/Mr.HelpMate-AI/cache/search_cache.pkl"
+CACHE_FILE = "/home/mobiledairy/Mr.HelpMate/Mr.HelpMate-AI/cache/search_cache.pkl"
 
 import os
 import pickle

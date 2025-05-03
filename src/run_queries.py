@@ -11,7 +11,7 @@ collection, embedder = setup_chroma(chunks)
 import json
 
 # Open the JSON file and load the data
-with open('/workspaces/Mr.HelpMate-AI/queries.json', 'r') as file:
+with open('/home/mobiledairy/Mr.HelpMate/Mr.HelpMate-AI/queries.json', 'r') as file:
     queries = json.load(file)["queries"]
 
 
@@ -25,7 +25,7 @@ for query in queries:
 
     print("Top 3 chunks:")
     for i, (text, score) in enumerate(reranked, 1):
-        print(f"[{i}] {text[:200]}...\n")
+        print(f"[{i}] {text[:300]}...\n")
 
     response = generate_answer(query, reranked)
     print("Generated Answer:\n", response)
