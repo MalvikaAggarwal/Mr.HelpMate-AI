@@ -16,7 +16,7 @@ We will be using a single long life insurance policy document for this project.
 
 1. The policy document can be found in the data folder with name - Principal-Sample-Life-Insurance-Policy.pdf
 
-## 4. Approach
+## 4. Approach & Layers
 
 The project should implement all the three layers effectively. It will be key to try out various strategies and
 experiments in various layers in order to build an effective search system. Let's explore what we need to do in each of
@@ -43,7 +43,7 @@ the layers.
    make sure that the prompt is exhaustive in its instructions, and the relevant information is correctly passed to the
    prompt. We may also choose to provide some few-shot examples in an attempt to improve the LLM output.
 
-## 5. System Layers & Architecture
+## 5. System Architecture
 
 The Main file **MR.HELPMATE.ipnyb** runs the code. 
 
@@ -53,7 +53,8 @@ The Main file **MR.HELPMATE.ipnyb** runs the code.
   advanced preprocessing as well.
 
 - **Document Chunking:** The document contains several pages and contains huge text, before generating the embeddings,
-  we need to generate the chunks. Let's start with a basic chunking technique, and chunking the text with fixed size.
+  we need to generate the chunks. Let's start with a basic chunking technique, and chunking the text with fixed size using 
+  RecursiveCharacterTextSplitter with chunk size of 500.
 
 - **Generating Embeddings:**  Generates embedding with SentenceTransformer with all-MiniLM-L12-v2 model.
 
