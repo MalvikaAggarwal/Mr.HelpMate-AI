@@ -4,3 +4,4 @@ __pycache__/
 
 # Ignore Chroma DB cache
 src/cache/chroma_db/
+cache/chroma_db/
